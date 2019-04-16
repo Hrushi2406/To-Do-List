@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-
-import Form from './Form';
+import {BrowserRouter,Route} from "react-router-dom";
+import form from './Form';
+import login from './login';
 
 class App extends Component {
 
-
   render(){
     return(
-      <div>
-        <Form />
-      </div>
+      <BrowserRouter>
+        <Route exact path="/" component={login}/>
+        <Route exact path="/todolist" component={form}/>
+      </BrowserRouter>
+
 
     );
   }
